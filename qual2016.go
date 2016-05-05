@@ -1,3 +1,6 @@
+
+package gomesh2016
+
 type Root struct {
 	QualifierRecordSet *QualifierRecordSet `xml:"QualifierRecordSet,omitempty" json:"QualifierRecordSet,omitempty"`
 }

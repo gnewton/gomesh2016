@@ -1,3 +1,6 @@
+
+package gomesh2016
+
 type Root struct {
 	SupplementalRecordSet *SupplementalRecordSet `xml:"SupplementalRecordSet,omitempty" json:"SupplementalRecordSet,omitempty"`
 }

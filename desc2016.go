@@ -1,3 +1,6 @@
+
+package gomesh2016
+
 type Root struct {
 	DescriptorRecordSet *DescriptorRecordSet `xml:"DescriptorRecordSet,omitempty" json:"DescriptorRecordSet,omitempty"`
 }

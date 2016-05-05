@@ -1,3 +1,6 @@
+package gomesh2016
+
+
 type Root struct {
 	PharmacologicalActionSet *PharmacologicalActionSet `xml:"PharmacologicalActionSet,omitempty" json:"PharmacologicalActionSet,omitempty"`
 }
