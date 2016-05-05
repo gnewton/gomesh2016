@@ -1,7 +1,7 @@
 
 package gomesh2016
 
-type Root struct {
+type DescriptorRoot struct {
 	DescriptorRecordSet *DescriptorRecordSet `xml:"DescriptorRecordSet,omitempty" json:"DescriptorRecordSet,omitempty"`
 }
 
@@ -30,6 +30,10 @@ type DescriptorRecord struct {
 	PublicMeSHNote *PublicMeSHNote `xml:"PublicMeSHNote,omitempty" json:"PublicMeSHNote,omitempty"`
 	SeeRelatedList *SeeRelatedList `xml:"SeeRelatedList,omitempty" json:"SeeRelatedList,omitempty"`
 	TreeNumberList *TreeNumberList `xml:"TreeNumberList,omitempty" json:"TreeNumberList,omitempty"`
+}
+
+type PharmacologicalActionList struct {
+	PharmacologicalAction []*PharmacologicalAction `xml:"PharmacologicalAction,omitempty" json:"PharmacologicalAction,omitempty"`
 }
 
 type ConceptList struct {
@@ -83,6 +87,7 @@ type Term struct {
 	Attr_IsPermutedTermYN string `xml:" IsPermutedTermYN,attr"  json:",omitempty"`
 	Attr_LexicalTag string `xml:" LexicalTag,attr"  json:",omitempty"`
 	Attr_RecordPreferredTermYN string `xml:" RecordPreferredTermYN,attr"  json:",omitempty"`
+	Abbreviation *Abbreviation `xml:"Abbreviation,omitempty" json:"Abbreviation,omitempty"`
 	DateCreated *DateCreated `xml:"DateCreated,omitempty" json:"DateCreated,omitempty"`
 	EntryVersion *EntryVersion `xml:"EntryVersion,omitempty" json:"EntryVersion,omitempty"`
 	SortVersion *SortVersion `xml:"SortVersion,omitempty" json:"SortVersion,omitempty"`
@@ -157,13 +162,6 @@ type HistoryNote struct {
 	Text string `xml:",chardata" json:",omitempty"`
 }
 
-type PharmacologicalActionList struct {
-	PharmacologicalAction []*PharmacologicalAction `xml:"PharmacologicalAction,omitempty" json:"PharmacologicalAction,omitempty"`
-}
-
-type PharmacologicalAction struct {
-	DescriptorReferredTo *DescriptorReferredTo `xml:"DescriptorReferredTo,omitempty" json:"DescriptorReferredTo,omitempty"`
-}
 
 type DescriptorReferredTo struct {
 	DescriptorName *DescriptorName `xml:"DescriptorName,omitempty" json:"DescriptorName,omitempty"`
@@ -194,14 +192,6 @@ type AllowableQualifier struct {
 type QualifierReferredTo struct {
 	QualifierName *QualifierName `xml:"QualifierName,omitempty" json:"QualifierName,omitempty"`
 	QualifierUI *QualifierUI `xml:"QualifierUI,omitempty" json:"QualifierUI,omitempty"`
-}
-
-type QualifierUI struct {
-	Text string `xml:",chardata" json:",omitempty"`
-}
-
-type QualifierName struct {
-	String *String `xml:"String,omitempty" json:"String,omitempty"`
 }
 
 type Abbreviation struct {
