@@ -1,6 +1,8 @@
 
 package gomesh2016
 
+const SUPPLEMENTAL_RECORD = "SupplementalRecord"
+
 type SupplementalRoot struct {
 	SupplementalRecordSet *SupplementalRecordSet `xml:"SupplementalRecordSet,omitempty" json:"SupplementalRecordSet,omitempty"`
 }
@@ -22,8 +24,8 @@ type SupplementalRecord struct {
 	PharmacologicalActionList *PharmacologicalActionList `xml:"PharmacologicalActionList,omitempty" json:"PharmacologicalActionList,omitempty"`
 	PreviousIndexingList *PreviousIndexingList `xml:"PreviousIndexingList,omitempty" json:"PreviousIndexingList,omitempty"`
 	SourceList *SourceList `xml:"SourceList,omitempty" json:"SourceList,omitempty"`
-	SupplementalRecordName *SupplementalRecordName `xml:"SupplementalRecordName,omitempty" json:"SupplementalRecordName,omitempty"`
-	SupplementalRecordUI *SupplementalRecordUI `xml:"SupplementalRecordUI,omitempty" json:"SupplementalRecordUI,omitempty"`
+	SupplementalRecordName string `xml:"SupplementalRecordName,omitempty" json:"SupplementalRecordName,omitempty"`
+	SupplementalRecordUI string `xml:"SupplementalRecordUI,omitempty" json:"SupplementalRecordUI,omitempty"`
 }
 
 type Note struct {
@@ -52,11 +54,6 @@ type IndexingInformation struct {
 }
 
 
-type SupplementalRecordName struct {
-	String *String `xml:"String,omitempty" json:"String,omitempty"`
-}
-
-
 type HeadingMappedToList struct {
 	HeadingMappedTo []*HeadingMappedTo `xml:"HeadingMappedTo,omitempty" json:"HeadingMappedTo,omitempty"`
 }
@@ -68,9 +65,7 @@ type HeadingMappedTo struct {
 
 
 
-type SupplementalRecordUI struct {
-	Text string `xml:",chardata" json:",omitempty"`
-}
+
 
 
 

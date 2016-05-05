@@ -1,5 +1,6 @@
-
 package gomesh2016
+
+const QUALIFIER_RECORD = "QualifierRecord"
 
 type QualifierRoot struct {
 	QualifierRecordSet *QualifierRecordSet `xml:"QualifierRecordSet,omitempty" json:"QualifierRecordSet,omitempty"`
@@ -18,18 +19,11 @@ type QualifierRecord struct {
 	DateRevised *DateRevised `xml:"DateRevised,omitempty" json:"DateRevised,omitempty"`
 	HistoryNote *HistoryNote `xml:"HistoryNote,omitempty" json:"HistoryNote,omitempty"`
 	OnlineNote *OnlineNote `xml:"OnlineNote,omitempty" json:"OnlineNote,omitempty"`
-	QualifierName *QualifierName `xml:"QualifierName,omitempty" json:"QualifierName,omitempty"`
-	QualifierUI *QualifierUI `xml:"QualifierUI,omitempty" json:"QualifierUI,omitempty"`
+	QualifierName string `xml:"QualifierName,omitempty" json:"QualifierName,omitempty"`
+	QualifierUI string `xml:"QualifierUI,omitempty" json:"QualifierUI,omitempty"`
 	TreeNumberList *TreeNumberList `xml:"TreeNumberList,omitempty" json:"TreeNumberList,omitempty"`
 }
 
-type QualifierUI struct {
-	Text string `xml:",chardata" json:",omitempty"`
-}
-
-type QualifierName struct {
-	String *String `xml:"String,omitempty" json:"String,omitempty"`
-}
 
 
 

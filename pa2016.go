@@ -1,5 +1,6 @@
 package gomesh2016
 
+const PHARMACOLOGICAL_RECORD = "PharmacologicalAction"
 
 type PaRoot struct {
 	PharmacologicalActionSet *PharmacologicalActionSet `xml:"PharmacologicalActionSet,omitempty" json:"PharmacologicalActionSet,omitempty"`
@@ -19,15 +20,8 @@ type PharmacologicalActionSubstanceList struct {
 }
 
 type Substance struct {
-	RecordName *RecordName `xml:"RecordName,omitempty" json:"RecordName,omitempty"`
-	RecordUI *RecordUI `xml:"RecordUI,omitempty" json:"RecordUI,omitempty"`
+	RecordName string `xml:"RecordName,omitempty" json:"RecordName,omitempty"`
+	RecordUI string `xml:"RecordUI,omitempty" json:"RecordUI,omitempty"`
 }
 
-type RecordUI struct {
-	Text string `xml:",chardata" json:",omitempty"`
-}
-
-type RecordName struct {
-	String *String `xml:"String,omitempty" json:"String,omitempty"`
-}
 

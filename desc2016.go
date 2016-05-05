@@ -1,6 +1,8 @@
 
 package gomesh2016
 
+const DESCRIPTOR_RECORD = "DescriptorRecord"
+
 type DescriptorRoot struct {
 	DescriptorRecordSet *DescriptorRecordSet `xml:"DescriptorRecordSet,omitempty" json:"DescriptorRecordSet,omitempty"`
 }
@@ -19,8 +21,8 @@ type DescriptorRecord struct {
 	DateCreated *DateCreated `xml:"DateCreated,omitempty" json:"DateCreated,omitempty"`
 	DateEstablished *DateEstablished `xml:"DateEstablished,omitempty" json:"DateEstablished,omitempty"`
 	DateRevised *DateRevised `xml:"DateRevised,omitempty" json:"DateRevised,omitempty"`
-	DescriptorName *DescriptorName `xml:"DescriptorName,omitempty" json:"DescriptorName,omitempty"`
-	DescriptorUI *DescriptorUI `xml:"DescriptorUI,omitempty" json:"DescriptorUI,omitempty"`
+	DescriptorName string `xml:"DescriptorName,omitempty" json:"DescriptorName,omitempty"`
+	DescriptorUI string `xml:"DescriptorUI,omitempty" json:"DescriptorUI,omitempty"`
 	EntryCombinationList *EntryCombinationList `xml:"EntryCombinationList,omitempty" json:"EntryCombinationList,omitempty"`
 	HistoryNote *HistoryNote `xml:"HistoryNote,omitempty" json:"HistoryNote,omitempty"`
 	NLMClassificationNumber *NLMClassificationNumber `xml:"NLMClassificationNumber,omitempty" json:"NLMClassificationNumber,omitempty"`
@@ -164,17 +166,11 @@ type HistoryNote struct {
 
 
 type DescriptorReferredTo struct {
-	DescriptorName *DescriptorName `xml:"DescriptorName,omitempty" json:"DescriptorName,omitempty"`
-	DescriptorUI *DescriptorUI `xml:"DescriptorUI,omitempty" json:"DescriptorUI,omitempty"`
+	DescriptorName string `xml:"DescriptorName,omitempty" json:"DescriptorName,omitempty"`
+	DescriptorUI string `xml:"DescriptorUI,omitempty" json:"DescriptorUI,omitempty"`
 }
 
-type DescriptorUI struct {
-	Text string `xml:",chardata" json:",omitempty"`
-}
 
-type DescriptorName struct {
-	String *String `xml:"String,omitempty" json:"String,omitempty"`
-}
 
 type NLMClassificationNumber struct {
 	Text string `xml:",chardata" json:",omitempty"`
@@ -190,8 +186,8 @@ type AllowableQualifier struct {
 }
 
 type QualifierReferredTo struct {
-	QualifierName *QualifierName `xml:"QualifierName,omitempty" json:"QualifierName,omitempty"`
-	QualifierUI *QualifierUI `xml:"QualifierUI,omitempty" json:"QualifierUI,omitempty"`
+     	QualifierName string `xml:"QualifierName,omitempty" json:"QualifierName,omitempty"`
+	QualifierUI string `xml:"QualifierUI,omitempty" json:"QualifierUI,omitempty"`
 }
 
 type Abbreviation struct {
