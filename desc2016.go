@@ -21,7 +21,7 @@ type DescriptorRecord struct {
 	DateCreated *DateCreated `xml:"DateCreated,omitempty" json:"DateCreated,omitempty"`
 	DateEstablished *DateEstablished `xml:"DateEstablished,omitempty" json:"DateEstablished,omitempty"`
 	DateRevised *DateRevised `xml:"DateRevised,omitempty" json:"DateRevised,omitempty"`
-	DescriptorName string `xml:"DescriptorName,omitempty" json:"DescriptorName,omitempty"`
+	DescriptorName string `xml:"DescriptorName>String,omitempty" json:"DescriptorName,omitempty"`
 	DescriptorUI string `xml:"DescriptorUI,omitempty" json:"DescriptorUI,omitempty"`
 	EntryCombinationList *EntryCombinationList `xml:"EntryCombinationList,omitempty" json:"EntryCombinationList,omitempty"`
 	HistoryNote *HistoryNote `xml:"HistoryNote,omitempty" json:"HistoryNote,omitempty"`
@@ -207,11 +207,7 @@ type PreviousIndexing struct {
 }
 
 type TreeNumberList struct {
-	TreeNumber []*TreeNumber `xml:"TreeNumber,omitempty" json:"TreeNumber,omitempty"`
-}
-
-type TreeNumber struct {
-	Text string `xml:",chardata" json:",omitempty"`
+	TreeNumber []string `xml:"TreeNumber,omitempty" json:"TreeNumber,omitempty"`
 }
 
 type Annotation struct {
